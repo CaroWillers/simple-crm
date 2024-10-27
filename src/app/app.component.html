@@ -6,6 +6,9 @@
     </div>
     <ul class="menu-icons">
       <!-- Dashboard-Link -->
+      @for (item of items$ | async; track item) {
+        <li>{{ item.name }}</li>
+      }
       <li>
         <a [routerLink]="['/dashboard']">
           <mat-icon>dashboard</mat-icon>Dashboard
